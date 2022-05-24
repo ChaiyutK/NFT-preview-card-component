@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+    body{
+      background-color: hsl(217, 54%, 11%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.125rem;
+    }
+    .container{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .nftflexbox{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .header{
+      color: white;
+      margin-left: 20px;
+      
+    }
+    .header:hover{
+      color:hsl(178, 100%, 50%);
+    }
+    .item{
+      display: block;
+      box-sizing: border-box;
+    }
+    .mainbox{
+      width: 240px;
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 8px;
+    }
+    .preimage{
+      width: 200px; 
+      height: 200px;
+      margin: 0 auto;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+    .image{
+      border-radius: 5px;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("images/image-equilibrium.jpg");
+    }
+
+    .overlay{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: hsl(178, 100%, 50%,0.5);
+      visibility: hidden;
+    }
+
+    .image:hover .overlay{
+      visibility: visible;
+    }
+    .overlay img{
+      position: absolute;
+      top : 40%;
+      left: 39%;
+    }
+    .priceday{
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .priceday li{
+      vertical-align: center;
+      font-size: 0.7rem;
+    }
+    .ethprice{
+      color: hsl(178, 100%, 50%);
+      margin-left: 5px;
+    }
+    .time{
+      color:hsl(215, 51%, 70%);
+      margin-left: 5px;
+    }
+    .detail{
+      color: hsl(215, 51%, 70%);
+      margin: 0 20px;
+      font-size: 0.7rem;
+    }
+    .name{
+      color:white;
+    }
+    .name:hover{
+      color:hsl(178, 100%, 50%);
+    }
+    .creator{
+      color: hsl(215, 51%, 70%);
+      font-size: 0.7rem;
+    }
+    hr{
+      height:1px;
+      border-width:0;
+      color: hsl(215, 32%, 27%);
+      background-color: hsl(215, 32%, 27%);
+      width: 85%;
+    }
+    .creatorflexbox{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    .imgcreator{
+      width: 10%;
+      height: 10%;
+      margin-right: 10px;
+      border: 1px solid;
+      border-color: white;
+      border-radius: 50%;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+  </style>
+</head>
+<body>
+<main class="container">
+  <div class="nftflexbox">
+    <div class="item mainbox">
+
+    
+      <div class="item preimage">
+        <div class="image">
+          <div class="overlay">
+            <img src="images/icon-view.svg" alt="eye icon">
+          </div>
+        </div>
+      </div>
+      <p class="header">
+        Equilibrium #3429
+      </p>
+      <p class="detail">
+        Our Equilibrium collection promotes balance and calm.
+      </p>
+      <ul class="priceday">
+        <li><img width="6px" src="images/icon-ethereum.svg" alt="ethereum icon"><span class="ethprice">0.041 ETH</span></li>
+        <li><img width="10px" src="images/icon-clock.svg" alt="ethereum icon"><span class="time">3 days left</span></li>
+      </ul>
+      <hr>
+      <div class="creatorflexbox">
+        <img class="imgcreator" src="images/image-avatar.png" alt="avatar">
+        <p class="creator">Creation of <span class="name">Jules Wyvern</span></p>
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+  
+
+  
+  
+  
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/ChaiyutK">Chaiyut Kongprawat</a>.
+  </div>
+</body>
+</html>
